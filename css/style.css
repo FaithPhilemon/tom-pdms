@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+  /* text-align: justify !important; */
+}
+
+
+
+h1, h2, h3{
+    color: #00c851;
+    font-weight: 600px;
+}
+ul li a{
+    color: #00c851!important;
+}
+p, span, a, blockquote{
+  font-size: 16px;
+  font-style: 'roboto';
+}
+.card{
+    height: 100%;
+}
+#about img{
+    height: 100%;
+}
+.heading-text{
+    /* text-align: center; */
+    padding: 20px;
+}
+.card-img-top{
+    height: 200px;
+}
+
+.text a{
+    color: black
+
+}
+
+section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+section .g1, .g2, .g3{
+    background-color:#00c851;
+    color: #fff;
+    box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.932);
+    transform: translateY(40);
+    height: 100%;
+}
+.footer, .africa{
+    padding: 0 !important;
+}
+.carousel-caption{
+  margin-top: 100% !important;
+}
+.blockquote{
+  border-left: 0px !important;
+  font-size: 16px !important;
+}
+.carousel-item img{
+ object-position: center; 
+}
+.slides img{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+
+}
+.slides{
+    height: 100%;
+}
+.modal-header{
+    background-color: #00c851;
+    color: white;
+}
+.modal p, li{
+    font-size: 14px;
+
+}
+.carousel-caption{
+    position: absolute;
+    right: 15%;
+    bottom: 150px !important;
+    left: 15%;
+    z-index: 20 !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff !important;
+    text-align: center;
+    font-family: sans-serif
+}
+.carousel-caption p{
+    text-transform: unset;
+}
+.about-img img{
+    height: 300px;
+    object-fit: cover;
+}
+.view .d-block{
+height: 100vh;
+object-fit: cover
+}
+@media only screen and (max-width: 768px) {
+    .home-img img{
+        height: 70vh !important;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .carousel-caption{
+        position: absolute;
+        right: 15%;
+        bottom: 15px !important;
+        left: 15%;
+        z-index: 20 !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff !important;
+        text-align: center;
+        font-family: sans-serif
+    }
+  }
+  .nav-pills .nav-link.active {
+    background-color: white !important;
+  }

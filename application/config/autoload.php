@@ -133,10 +133,5 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 $autoload['model'] = array(
-	'Countries_model',
-	'States_model',
-	'Locals_model',
-	'Model_auth',
-	'Adminuser_model',
-	'Security_question_model',
+	'Projects_model',
 );

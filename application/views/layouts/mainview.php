@@ -45,7 +45,7 @@
                   <span>
                     <img src="<?php echo base_url() ?>images/MAUTECH-Post-UTME-Form-o3schools.jpeg" width="110" height="100">
                   </span>
-                    <h4><b>welcome to the department of statistic & operations research <br> project Database management system </b></h4>
+                    <h4><b>the department of statistic & operations research <br> project Database management system </b></h4>
                 </div>
                
                 <div class="main-content">

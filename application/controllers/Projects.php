@@ -20,6 +20,18 @@ class Projects extends App_Controller
         $this->load->view('layouts/mainview', $data);
     }
 
+    public function preview($id = ""){
+        if($id == ""){
+            redirect(base_url('projects'),'refresh');
+        }else{
+            $data = array(
+                'title' => 'Preview Project',
+                'main_content' => 'projects/preview',
+                'row' => $this->Projects_model->get_by_id($id),
+            );
+            $this->load->view('layouts/mainview', $data);
+        }
+    }
 
     public function upload() 
     {

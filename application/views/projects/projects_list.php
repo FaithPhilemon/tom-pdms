@@ -16,6 +16,7 @@
               <th scope="col">Date</th>
               <th scope="col">Title</th>
               <th scope="col">Author</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -27,6 +28,7 @@
                           <td>'.$project->dateandtime.'</td>
                           <td><a href="'.base_url('projects/preview/'.$project->id.'').'">'.$project->title.'</a></td>
                           <td>'.$project->author.'</td>
+                          <td><a href="'.base_url("projects/delete/$project->id").'" class="text text-danger" style="font-weight:bold;">Delete</td>
                       </tr>';
                   $sn++;
               }

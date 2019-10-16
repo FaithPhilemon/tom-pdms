@@ -68,12 +68,12 @@ class Projects extends App_Controller
             $data = array(
                 'button' => 'Update',
                 'action' => site_url('projects/update_action'),
-		'id' => set_value('id', $row->id),
-		'title' => set_value('title', $row->title),
-		'dateandtime' => set_value('dateandtime', $row->dateandtime),
-		'abstract' => set_value('abstract', $row->abstract),
-		'file' => set_value('file', $row->file),
-	    );
+                'id' => set_value('id', $row->id),
+                'title' => set_value('title', $row->title),
+                'dateandtime' => set_value('dateandtime', $row->dateandtime),
+                'abstract' => set_value('abstract', $row->abstract),
+                'file' => set_value('file', $row->file),
+                );
             $this->load->view('projects/projects_form', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');

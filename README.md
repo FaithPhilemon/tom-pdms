@@ -1,5 +1,4 @@
 #TOOLS
-1. CodeIgniter
-2. Harviacode crud generator
-3. Bootstrap 3
-4. AdminLTE
+1. CodeIgniter[Framework]
+2. Harviacode [Automation Tool]
+3. Bootstrap 3 [Library]

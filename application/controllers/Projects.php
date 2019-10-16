@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Projects extends CI_Controller
+class Projects extends App_Controller
 {
     // function __construct()
     // {
@@ -20,40 +20,44 @@ class Projects extends CI_Controller
         $this->load->view('layouts/mainview', $data);
     }
 
-    
 
-    public function create() 
+    public function upload() 
     {
         $data = array(
-            'button' => 'Create',
-            'action' => site_url('projects/create_action'),
-	    'id' => set_value('id'),
-	    'title' => set_value('title'),
-	    'dateandtime' => set_value('dateandtime'),
-	    'abstract' => set_value('abstract'),
-	    'file' => set_value('file'),
-	);
-        $this->load->view('projects/projects_form', $data);
+            'title' => 'Upload Project',
+            'main_content' => 'projects/projects_form',
+            'project_title' => set_value('project_title'),
+            'dateandtime' => set_value('dateandtime'),
+            'abstract' => set_value('abstract'),
+            'author' => set_value('author'),
+        );
+        
+        $this->load->view('layouts/mainview', $data);
     }
     
-    public function create_action() 
-    {
-        $this->_rules();
+    public function upload_action() {
+        // upload file
+        $file = $this->upload_document($this->input->post('project_title',TRUE));
 
-        if ($this->form_validation->run() == FALSE) {
-            $this->create();
-        } else {
+        // check if upload was succesful
+        $arr = explode('/',trim($file));
+        if($arr[0] != 'uploads'){
+            $this->session->set_flashdata('error_message', $file);
+            redirect(site_url('projects/upload'));
+        }else{
             $data = array(
-		'title' => $this->input->post('title',TRUE),
-		'dateandtime' => $this->input->post('dateandtime',TRUE),
-		'abstract' => $this->input->post('abstract',TRUE),
-		'file' => $this->input->post('file',TRUE),
-	    );
+                'title' => $this->input->post('project_title',TRUE),
+                'author' => $this->input->post('author',TRUE),
+                'dateandtime' => $this->input->post('dateandtime',TRUE),
+                'abstract' => $this->input->post('abstract',TRUE),
+                'file' => $file,
+            );
 
             $this->Projects_model->insert($data);
-            $this->session->set_flashdata('message', 'Create Record Success');
+            $this->session->set_flashdata('message', 'Project Uploaded');
             redirect(site_url('projects'));
         }
+            
     }
     
     public function update($id) 
@@ -111,16 +115,7 @@ class Projects extends CI_Controller
         }
     }
 
-    public function _rules() 
-    {
-	$this->form_validation->set_rules('title', 'title', 'trim|required');
-	$this->form_validation->set_rules('dateandtime', 'dateandtime', 'trim|required');
-	$this->form_validation->set_rules('abstract', 'abstract', 'trim|required');
-	$this->form_validation->set_rules('file', 'file', 'trim|required');
-
-	$this->form_validation->set_rules('id', 'id', 'trim');
-	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
-    }
+    
 
 }
 

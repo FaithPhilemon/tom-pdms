@@ -22,7 +22,7 @@
 <!--               <a class="navbar-brand" href="<?php echo base_url() ?>#"><img src="<?php echo base_url() ?>images/MAUTECH-Post-UTME-Form-o3schools.jpeg" width="50" height="50" alt=""></a>
  -->              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                  <a class="nav-link" href="<?php echo base_url() ?>index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="<?=base_url(); ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
               </ul>

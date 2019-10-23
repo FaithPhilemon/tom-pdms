@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 16, 2019 at 01:57 PM
+-- Generation Time: Oct 23, 2019 at 08:59 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.2.8
 
@@ -66,7 +66,7 @@ CREATE TABLE `projects` (
   `title` varchar(64) NOT NULL,
   `dateandtime` varchar(16) NOT NULL,
   `abstract` text NOT NULL,
-  `file` varchar(64) NOT NULL,
+  `file` varchar(300) NOT NULL,
   `author` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -75,7 +75,9 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `title`, `dateandtime`, `abstract`, `file`, `author`) VALUES
-(3, 'Design and implementation of PDBMS for stat', '2019-10-10', 'Some absctracts', 'uploads/documents/Design and implementation of PDBMS for stat.do', 'Tomlivisky Thomas');
+(3, 'Design and implementation of PDBMS for stat', '2019-10-10', 'Some absctracts', 'uploads/documents/Design and implementation of PDBMS for stat.do', 'Tomlivisky Thomas'),
+(4, 'Simulation Techniques to hunger and poverty eradication', '2019-10-18', '', 'uploads/documents/Simulation Techniques to hunger and poverty er', 'Zainab Zainab'),
+(5, 'Multivariate analysis to problems in money making in the state', '2019-10-17', 'Uchenna Ebuka ', 'uploads/documents/Multivariate_analysis_to_problems_in_money_making_in_the_state.docx', 'Uchenna Ebuka');
 
 -- --------------------------------------------------------
 
@@ -193,7 +195,7 @@ ALTER TABLE `login_attempts`
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -25,14 +25,14 @@ class App_Controller extends MY_Controller {
 	// }
 
 	public function upload_document($topic){
+		$filename = preg_replace('/\s+/', '_', $topic);
+
     	// uploads/users
         $config['upload_path'] = 'uploads/documents';
-        $config['file_name'] = $topic;
+        $config['file_name'] = $filename;
         $config['allowed_types'] = 'docx|doc|pdf';
         $config['max_size'] = '1024';
 
-        // $config['max_width']  = '1024';
-        // $config['max_height']  = '768';
 
         $this->load->library('upload', $config);
         if ( ! $this->upload->do_upload('document'))

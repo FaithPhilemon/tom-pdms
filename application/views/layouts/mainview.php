@@ -69,7 +69,26 @@
 
 <script src="<?php echo base_url() ?>js/jquery-3.3.1.min.js"></script>
 <script src="<?php echo base_url() ?>js/bootstrap.min.js"></script>
-<script src="<?php echo base_url() ?>https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.js"></script>
-<script src="<?php echo base_url() ?>js/fontawesome.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.js"></script>
+<script src="<?php echo base_url("js/fontawesome.min.js") ?>"></script>
+<script src="<?php echo base_url("js/addons/datatables.min.js"); ?>"></script>
+
+<script>
+		
+		$(function () {
+
+			$('#datatable').DataTable({
+				'paging'      : true,
+				'lengthChange': false,
+				'searching'   : true,
+				'ordering'    : true,
+				'info'        : true,
+				'autoWidth'   : true
+			})
+
+		})
+
+</script>
 </body>
 </html>
+
